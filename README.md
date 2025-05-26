@@ -1,4 +1,4 @@
-# Hessian Geometry of Latent Space in Generative Models
+# [ICML 2025] Hessian Geometry of Latent Space in Generative Models
 
 📄 This repository contains code and experiments for our paper:
 
