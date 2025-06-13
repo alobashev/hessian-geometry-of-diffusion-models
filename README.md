@@ -5,6 +5,8 @@
 **"Hessian Geometry of Latent Space in Generative Models"**  by Alexander Lobashev, Dmitry Guskov, Maria Larchenko, Mikhail Tamm 
 Accepted to **ICML 2025**
 
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2506.10632)
+
 ![Fig0](figures/interpolation_big.png)
 
 ## 📝 Abstract
