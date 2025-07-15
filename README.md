@@ -19,3 +19,6 @@ We demonstrate that while geodesic interpolations are approximately linear withi
 These findings provide new insights into the complex structure of diffusion model latent spaces and their connection to phenomena like phase transitions.
 
 ![Fig1](figures/fractal_lion_mount.png)
+
+## Poster
+![Fig1](figures/ICML_2025_poster_Hessian_geometry.png)
