@@ -31,25 +31,25 @@ N_epochs = 60
 
 ##############
 # 
-#       0.1 Apply gaussian blur
+#       0.1 For some experiments we can add noise to the image, so that it is not deterministic, but stochastic.
 #
-############
+##############
 alpha = 1 #  image = alpha * image + (1-alpha) * torch.rand(image.shape)*255
 
 model_name = f'diff_clips' #CHANGE HERE
 
-########################################################################################################
+################################################################################################
 #
-#    1. Load dataset
+#    1. Load dataset 
 #
-########################################################################################################
+################################################################################################
 print(f"current path: {pathlib.Path().resolve()}")
 
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 global_datetime = str(now.date().year) + "_" + str(100 + now.date().month)[1:] + "_" + str(now.date().day) + "_" + str(current_time)
 
-states = np.load(DATASETS_PATH+"clip_as_states.npy",)
+states = np.load(DATASETS_PATH+"clip_as_states.npy",) # we can use clip embeddings as states, or images
 # states = np.load(DATASETS_PATH+"states.npy",)
 labels = np.load(DATASETS_PATH+"labels.npy",)
 targets = np.load(DATASETS_PATH+"targets.npy",)
@@ -139,7 +139,7 @@ print(f"total parameters = {sum([_.numel() for _ in posterior_net.parameters()])
 if (device.type == 'cuda') and (len(DEVICE_NUMBERS_TO_USE) > 1):
 	posterior_net = nn.DataParallel(posterior_net, device_ids=DEVICE_NUMBERS_TO_USE, output_device=device, dim=0)
     
- ########################################################################################################
+########################################################################################################
 #
 #    5. Define dataloaders
 #
