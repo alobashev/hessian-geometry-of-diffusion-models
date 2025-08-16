@@ -77,4 +77,7 @@ These findings provide new insights into the complex structure of diffusion mode
 * **weights/**
   Trained model checkpoints:
 
+* **data/**
+  Anchor latents of Diffusion example from the paper example for the reproducibility; List [latent_0, latent_1, latent_2] 
+
   * `conv_model_diff_clip_v1.pt` – posterior U‑Net trained on diffusion+CLIP embeddings
